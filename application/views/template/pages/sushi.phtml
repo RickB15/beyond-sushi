@@ -1,0 +1,24 @@
+ <div class="row">   
+    <?php 
+        $items = array(
+            'pickle me' => 'pickle-me',
+            'sushi' => 'sushi',
+            'sweet tree' => 'sweet-tree',
+            'mighty mushroom' => 'mighty-mushroom',
+            'green machine' => 'green-machine',
+            'chic pea' => 'chic_pea'
+        );
+        foreach($items as $item => $image):
+    ?>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card my-2 my-md-3">
+            <img src="<?= IMGPATH.$pagename.'_rolls/'.$pagename.'/'.$image; ?>" class="card-img-top" alt="<?= $image; ?>" />
+            <div class="card-body text-center">
+                <?= ucfirst($item); ?>
+            </div>
+        </div>
+    </div>
+    <?php
+        endforeach;
+    ?>
+</div>

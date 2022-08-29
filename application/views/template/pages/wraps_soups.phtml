@@ -1,0 +1,38 @@
+ <div class="row">   
+    <?php 
+        $wraps = array(
+            'nutty buddy' => 'nutty_buddy',
+            'spicy shroom wrap' => 'spicy_shroom_wrap',
+            'sweet bean' => 'sweet-bean'
+        );
+        $soups = array(
+            'coconut curry starter soup' => 'coconut_curry_starter_soup',
+            'dumpling soup' => 'dumpling_soup',
+            'red miso noodle soup' => 'red_miso_noodle_soup'
+        );
+        foreach($wraps as $item => $image):
+    ?>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card my-2 my-md-3">
+            <img src="<?= IMGPATH.'rice_paper_wraps/wraps/'.$image; ?>" class="card-img-top" alt="<?= $image; ?>" />
+            <div class="card-body text-center">
+                <?= ucfirst($item); ?>
+            </div>
+        </div>
+    </div>
+    <?php
+        endforeach;
+        foreach($soups as $item => $image):
+    ?>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card my-2 my-md-3">
+            <img src="<?= IMGPATH.'soups/soep/'.$image; ?>" class="card-img-top" alt="<?= $image; ?>" />
+            <div class="card-body text-center">
+                <?= ucfirst($item); ?>
+            </div>
+        </div>
+    </div>
+    <?php
+        endforeach;
+    ?>
+</div>

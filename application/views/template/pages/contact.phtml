@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="card my-2 my-md-3">
+            <h3><?= ucfirst($pagename); ?></h3>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-8 order-2 order-lg-1 d-md-flex d-lg-block align-items-stretch">
+        <div class="card my-2 my-md-3 d-flex align-items-stretch">
+            <img src="<?= IMGPATH.$pagename ?>\reglandingpage" class="contact-img" alt="reglandingpage">
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 order-1 order-lg-2">
+        <div class="card my-2 my-md-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Dag</th>
+                        <th scope="col">Openingstijden</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Maandag</th>
+                        <td>9:00 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dinsdag</th>
+                        <td>8:30 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Woensdag</th>
+                        <td>8:30 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Donderdag</th>
+                        <td>8:30 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Vrijdag</th>
+                        <td>8:30 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zaterdag</th>
+                        <td>8:00 - 22:00 *</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zondag</th>
+                        <td>12:00 - 22:00 **</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">
+                            <small>* Heerhugowaard geopend tot 24:00<br>
+                            ** Castricum geopend tot 23:00</small>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <?php 
+        $companies = Array(
+            'company1' => Array(
+                'address'   => 'Burgemeester Mooijstraat 17',
+                'postcode'  => '1901 EP, Castricum',
+                'phone'     => 'T 0251 - 652 386',
+                'email'     => 'info@beyondsushi.stateu.org'
+            ),
+            'company2' => Array(
+                'address'   => 'Geesterduinweg 39',
+                'postcode'  => '1902 EJ, Castricum',
+                'phone'     => 'T 0251 - 654683',
+                'email'     => 'info@beyondsushi.stateu.org'
+            ),
+            'company3' => Array(
+                'address'   => 'Middenwaard 44',
+                'postcode'  => '1703 SH, Heerhugowaard',
+                'phone'     => 'T 072 - 7370105',
+                'email'     => 'info@beyondsushi.stateu.org'
+            )
+        );
+        foreach ($companies as $info):
+    ?>   
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card my-2 my-md-3">
+            <span><?= $info['address']; ?></span>
+            <span><?= $info['postcode']; ?></span>
+            <span><?= $info['phone']; ?></span>
+            <span><?= $info['email']; ?></span>
+        </div>
+    </div>
+    <?php
+        endforeach;
+    ?>
+</div>
